@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Renamer",
+  "version": "1.0",
+  "description": "Rename browser tabs via context menu",
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "storage",
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "web_accessible_resources": []
+} 
